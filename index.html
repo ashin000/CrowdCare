@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>CivicConnect - Bridge Citizens & Government</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin:0; 
+      background:#f4f4f4;
+    }
+    header {
+      background:#0d6efd; 
+      color:white; 
+      padding:20px; 
+      text-align:center;
+    }
+    nav a {
+      color:white; 
+      margin:0 15px; 
+      text-decoration:none;
+    }
+    .hero {
+      text-align:center;
+      padding:50px 20px; 
+      background:#eaf2ff;
+    }
+    .hero h1 {
+      font-size:2.5em;
+    }
+    .features {
+      display:flex; 
+      justify-content:space-around;
+      padding:40px; 
+      background:white;
+      flex-wrap: wrap; /* allow wrapping on smaller screens */
+      background-image:url("features.jpeg") ;
+      background-repeat:no-repeat;
+      
+    }
+    .card {
+      background: white;
+      padding:20px;
+      text-align:center; 
+      width:30%; 
+      border-radius:10px; 
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      margin-bottom:20px;
+    }
+    .dashboard {
+      display: flex; 
+      padding:40px;
+      flex-wrap: wrap; /* stack on mobile */
+    }
+    .issues, .announcements {
+      flex:1; 
+      margin:10px; 
+      background:white; 
+      padding:20px; 
+      border-radius:10px;
+    }
+    footer {
+      background:#0d6efd; 
+      color:white; 
+      text-align:center;
+      padding:15px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+      .dashboard {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CrowdCare</h1>
+    <nav class="d-flex justify-content-center flex-wrap">
+     
+      <a href="report.html">Report Issue</a>
+      <a href="#">Announcements</a>
+      <a href="#">Polls</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bridge the Gap Between Citizens and Government</h1>
+    <p>Submit issues, receive updates, and stay connected with your community.</p>
+    <a class="btn btn-warning mb-2" href="report.html">Report an Issue</a>
+    <a class="btn btn-warning mb-2">View Announcements</a>
+  </section>
+
+  <section class="features">
+    <div class="card">📩<h3>Submit & Track Issues</h3><p>Report problems and follow their status in real-time.</p></div>
+    <div class="card">📢<h3>Live Announcements</h3><p>Stay updated with government alerts and initiatives.</p></div>
+    <div class="card">🗳️<h3>Community Polls</h3><p>Share your opinion and influence local decisions.</p></div>
+  </section>
+
+  <section class="dashboard">
+    <h2 class="w-100 text-center mb-3">Dashboard</h2>
+    <div class="issues">
+      <h2>Recent Citizen Reports</h2>
+      <ul>
+        <li>Pothole in Main Street - <b>Pending</b></li>
+        <li>Streetlight not working - <b>In Progress</b></li>
+        <li>Overflowing garbage bin - <b>Resolved</b></li>
+      </ul>
+    </div>
+    <div class="announcements">
+      <h2>Government Announcements</h2>
+      <marquee direction="up"><ul>
+        <li>🟢 Water supply maintenance on 6th Aug</li>
+        <li>🟡 Road safety week starts next Monday</li>
+        <li>🔵 Vaccination camp on 10th Aug</li>
+      </ul></marquee>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Crowdcare | Contact: support@crowdcare.gov</p>
+  </footer>
+</body>
+</html>
