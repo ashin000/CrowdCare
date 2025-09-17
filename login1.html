@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; background:#f2f6fa; }
+    .container { background:#fff; padding:30px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1); width:300px; }
+    h2 { margin-bottom:20px; text-align:center; }
+    label { display:block; margin-top:10px; text-align:left; }
+    input { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:6px; }
+    button { margin-top:15px; width:100%; padding:10px; background:#007bff; color:#fff; border:none; border-radius:6px; cursor:pointer; }
+    button:hover { background:#0056b3; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 id="roleTitle">Login</h2>
+
+    <form id="loginForm">
+      <div id="publicFields">
+        <label>Email or Mobile</label>
+        <input type="text" placeholder="you@example.com">
+        <label>Password</label>
+        <input type="password" placeholder="********">
+      </div>
+
+      <button type="submit">Login</button>
+      Don't have an account? <a href="public signin.html">Sign up</a>
+
+    </form>
+  </div>
+
+  <script>
+    // Get role from localStorage
+    const role = localStorage.getItem("userRole");
+
+    if(role === "public"){
+      document.getElementById("roleTitle").innerText = "Public User Login";
+      document.getElementById("publicFields").style.display = "block";
+      document.getElementById("officialFields").style.display = "none";
+    } else if(role === "official"){
+      document.getElementById("roleTitle").innerText = "Government Official Login";
+      document.getElementById("publicFields").style.display = "none";
+      document.getElementById("officialFields").style.display = "block";
+    }
+  </script>
+</body>
+</html>
